@@ -8,7 +8,7 @@ if ($lastFile) {
     # Extraire le nom sans extension
     $filename = [System.IO.Path]::GetFileNameWithoutExtension($lastFile.ToString())
     # Faire le commit avec le message demandé
-    git commit -m "RootMe - $filename"
+    git commit -m "Hackropole - $filename"
     # Pousser sur le dépôt distant
     git push
 }
