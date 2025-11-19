@@ -1,0 +1,7 @@
+On utilise volatility3.
+
+Les commandes qui donnes les infos sont : 
+    - vol -f analyse-memoire.dmp windows.pslist
+    - vol -f analyse-memoire.dmp windows.cmdline | grep 'soffice.exe'
+
+Le premiere nous donne que le programme utilisé est soffice.exe. La deuxieme nous donne le fichier.
