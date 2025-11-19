@@ -1,0 +1,4 @@
+En regardant dans le code source de la page web, on voit un commentaire interressant qui nous permet de lire le code source php.
+
+Le code source nous indique que le paramètre "code" nous permet d'exécuter du code. 
+On lit le fichier flag.php (avec cat) et le flag est en commentaire dans le code source.
