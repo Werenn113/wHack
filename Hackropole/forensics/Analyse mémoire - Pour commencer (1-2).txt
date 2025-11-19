@@ -1,0 +1,10 @@
+On utilise volatility3:
+    git clone https://github.com/volatilityfoundation/volatility3.git
+    cd volatility3/
+    python3 -m venv venv && . venv/bin/activate
+    pip install -e ".[dev]"
+
+Avec ces commandes on récupère ce qu'on a besoin :
+    - vol -f analyse-memoire.dmp windows.envars | grep -Ei 'USERNAME'
+    - vol -f analyse-memoire.dmp windows.envars | grep 'COMPUTERNAME'
+    - vol -f analyse-memoire.dmp windows.netscan
