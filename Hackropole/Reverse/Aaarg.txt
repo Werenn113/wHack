@@ -1,0 +1,33 @@
+On analyse le fichier avec ghidra. 
+
+Dans entry on trouve : __libc_start_main (cette fonction appel une autre fonction qui est la main du fichier).
+
+La fonction main est (après quelques rennomage) : 
+        undefined8 main(int n_args,long args)
+
+            {
+            undefined8 uVar1;
+            ulong arg_2;
+            char *local_10;
+            
+            uVar1 = 1;
+            if (1 < n_args) {
+                arg_2 = strtoul(*(char **)(args + 8),&local_10,10);
+                uVar1 = 1;
+                if ((*local_10 == '\0') && (uVar1 = 2, arg_2 == (long)-n_args)) {
+                arg_2 = 0;
+                do {
+                    putc((int)(char)(&DAT_00402010)[arg_2],stdout);
+                    arg_2 = arg_2 + 4;
+                } while (arg_2 < 0x116);
+                putc(10,stdout);
+                uVar1 = 0;
+                }
+            }
+            return uVar1;
+            }
+
+On comprends que le 2e arguments doit être égale à - le nombre d'arguments, sachant que le nom du fichier compte, par exemple :
+    ./aaarg -2
+    ./aaarg -3 test
+    ./aaarg -4 test test
