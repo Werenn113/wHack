@@ -1,0 +1,1 @@
+La fonction atoi ne marche pas avec les nombres négatifs, donc il suffit de rentrer -1000
