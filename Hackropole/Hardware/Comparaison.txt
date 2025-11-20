@@ -1,0 +1,18 @@
+Il faut faire un fichier asm puis le convertir avec le fichier python assembly.py:
+    python3 assembly.ps exploit.asm
+
+Le code de exploit.asm:
+    CMP R5, R6
+    JZA equal
+    JNZA not_equal
+
+    equal:
+            MOV R0, #0
+            JZA exit
+
+    not_equal:
+            MOV R0, #1
+            JZA exit
+
+    exit:
+            STP
