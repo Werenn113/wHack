@@ -1,0 +1,3 @@
+On ouvre le fichier dans logic2. On ajoute l'analyseur correspondant (async serial, demander à chatgpt).
+
+On peut copier le texte et faire un ctrl+f, le flag est dedans.
