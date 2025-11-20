@@ -1,0 +1,1 @@
+Il suffit de faire : fdisk -l fcsc.raw
